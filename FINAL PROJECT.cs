@@ -39,34 +39,44 @@ namespace FinalProject
                                 Activity1.run();
                                 break;
                             case 2:
-                                ActivityNo2();
+                                Activity2 Activity2 = new Activity2();
+                                Activity2.run();
                                 break;
                             case 3:
-                                ActivityNo3();
+                                Activity3 Activity3 = new Activity3();
+                                Activity3.run();
                                 break;
                             case 4:
-                                ActivityNo4();
+                                Activity4 Activity4 = new Activity4();
+                                Activity4.run();
                                 break;
                             case 5:
-                                ActivityNo5();
+                                Activity5 Activity5 = new Activity5();
+                                Activity5.run();
                                 break;
                             case 6:
-                                ActivityNo6();
+                                Activity6 Activity6 = new Activity6();
+                                Activity6.run();
                                 break;
                             case 7:
-                                ActivityNo7();
+                                Activity7 Activity7 = new Activity7();
+                                Activity7.run();
                                 break;
                             case 8:
-                                ActivityNo8();
+                                Activity8 Activity8 = new Activity8();
+                                Activity8.run();
                                 break;
                             case 9:
-                                PrelimExam();
+                                PrelimExam PrelimExam = new PrelimExam();
+                                PrelimExam.run();
                                 break;
                             case 10:
-                                MidtermExam();
+                                MidtermExam MidtermExam = new MidtermExam();
+                                MidtermExam.run();
                                 break;
                             case 11:
-                                SemiFinalExam();
+                                SemiFinalExam SemiFinalExam = new SemiFinalExam();
+                                SemiFinalExam.run();
                                 break;
                         }
                     }
