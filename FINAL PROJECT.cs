@@ -5,27 +5,29 @@ public class Program
 {
     static void Main(string[] args)
     {
+        //Array to store the activities viewed by the user
         int[] viewedActivities = new int[11]; // Assuming a maximum of 11 unique activities
-        int viewedCount = 0;
-        bool continueViewing = true;
+        int viewedCount = 0; //Counter for the number of viewed activities
+        bool continueViewing = true; //Flag to control the viewing loop
 
         while (continueViewing)
         {
-            // Display menu
+            //Display the menu of activities and exams
             ShowMenu();
 
-            // Read user input
+            //Read user input for selecting an activity or exam
             Console.Write("\nPlease select which activity you want to view: ");
             string input = Console.ReadLine();
             Console.Clear();
             int selectedActivity;
 
-            // Validate input
+            //Validate if the input is a valid integer
             if (int.TryParse(input, out selectedActivity))
             {
+                //Check if the selected activity is within the valid range
                 if (selectedActivity >= 1 && selectedActivity <= 11)
                 {                                                        
-                    // Show the selected activity or exam
+                    //Display the selected activity or exam
                     Console.WriteLine("\nYou are viewing Activity " + selectedActivity + "\n");
                     switch (selectedActivity)
                     {
@@ -76,7 +78,7 @@ public class Program
                     }
                 }
 
-                // Add to the viewed list if not already viewed
+                //Add the selected activity to the viewed list if not already viewed
                 bool alreadyViewed = false;
                 for (int i = 0; i < viewedCount; i++)
                 {
@@ -101,12 +103,12 @@ public class Program
             {
                 Console.WriteLine("Invalid Input. Please enter a number.");
             }
-                // Prompt to continue
+                //Prompt user to continue or exit the loop
                 Console.Write("\nDo you wish to continue? (Answer yes or no): ");
                 continueViewing = Console.ReadLine().ToLower() == "yes";
                 Console.Clear();
             }
-
+             //Display the list of activities that have been viewed
             Console.WriteLine("You have viewed the following activities:\n");
             for (int i = 0; i < viewedCount; i++)
             {
@@ -115,7 +117,8 @@ public class Program
             Console.WriteLine("Program Ends \n");
         }
 
-        static void ShowMenu()
+           //Method to display the menu of activities and exams
+           static void ShowMenu()
         {
             Console.WriteLine("1. Activity No.1");
             Console.WriteLine("2. Activity No.2");
